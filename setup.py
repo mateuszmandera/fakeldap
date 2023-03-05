@@ -7,7 +7,7 @@ def read(fname):
 
 extra = {}
 requirements = ['python-ldap'],
-tests_require = ['nose', 'Mock', 'coverage', 'unittest2', 'python-ldap']
+tests_require = ['nose2', 'Mock', 'coverage', 'unittest2', 'python-ldap']
 
 setup(
     name = "fakeldap",
@@ -18,8 +18,8 @@ setup(
     install_requires = requirements,
 
     tests_require=tests_require,
-    setup_requires='nose',
-    test_suite = "nose.collector",
+    setup_requires='nose2',
+    test_suite = "nose2.collector.collector",
     extras_require={'test': tests_require},
 
     author = "Christo Buschek",
